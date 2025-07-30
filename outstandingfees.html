@@ -1,0 +1,360 @@
+<head>
+<meta charset="UTF-8" />
+<title>DRTS - Outstanding Fees</title>
+<script src="script.js"defer></script>
+<link rel="stylesheet" href="style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+ <!-- Navbar -->
+<div class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="DRTS Logo" />
+    </a>
+  </div>
+
+  <!-- Hamburger Menu for Mobile -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links">
+    <li>
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="book.html">Book for a Test</a>
+        <a href="vehicleregistration.html">Vehicle Registration</a>
+        <a href="driverslicenserenewal.html">Driver's License Renewal</a>
+      </div>
+    </li>
+    <li>
+      <a href="#">Fines & Penalties</a>
+      <div class="dropdown-content">
+        <a href="licenserenewal.html">Pay Traffic Fines</a>
+        <a href="outstandingfees.html">View Outstanding Fees</a>
+        <a href="appealfine.html">Appeal a Fine</a>
+      </div>
+    </li>
+    <li>
+      <a href="contact.html">Contact</a>
+    </li>
+  </ul>
+</div>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>View Your Outstanding Fees</h1>
+            <p>Check and settle your pending payments easily.</p>
+        </div>
+    </section>
+
+    <!-- Fees Lookup Section -->
+    <section class="fees-section">
+        <div class="fees-container">
+            <h2>Check Outstanding Fees</h2>
+            <form class="fees-form" id="feesForm">
+                <div class="form-group">
+                    <label for="omang">Omang/License Number</label>
+                    <input type="text" id="omang" placeholder="Enter your Omang or License Number" required />
+                </div>
+                <button type="submit" class="submit-btn">Check Fees</button>
+            </form>
+
+            <!-- Fees Display Table -->
+            <div class="fees-list" id="feesList" style="display: none;">
+                <h3>Your Outstanding Fees</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fee Type</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="feesTableBody">
+                        <!-- Dynamic Rows Go Here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="footer">
+
+        <div class="footer-container">
+
+                <div class="footer-box">
+                        <h3>Quick Links</h3>
+                        <ul>
+                                <li><a href="#">Bookings</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                        </ul>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Contact Us</h3>
+                        <p>Phone: 390 5422</p>
+                        <p>Email: info@drts.gov.bw</p>
+                        <p>Address: 8WJ3+H3V, Nkrumah, Gaborone</p>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                </div>
+
+        </div>
+<br>
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+                <p>&copy; 2025 Department of Road Transport and Safety. All Rights Reserved.</p>
+        </div>
+
+</footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('feesForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const omang = document.getElementById('omang').value.trim();
+            const feesList = document.getElementById('feesList');
+            const feesTableBody = document.getElementById('feesTableBody');
+
+            // Simulate API response
+            const mockData = {
+                '123456789': [
+                    { type: 'Driving without a license', amount: 'P1500.00', status: 'Unpaid' },
+                    { type: 'Speeding', amount: 'P1500.00', status: 'Unpaid' },
+                ],
+            };
+
+            // Clear existing table rows
+            feesTableBody.innerHTML = '';
+
+            if (mockData[omang]) {
+                mockData[omang].forEach(fee => {
+                    const row = document.createElement('tr');
+
+                    row.innerHTML = `
+                        <td>${fee.type}</td>
+                        <td>${fee.amount}</td>
+                        <td class="${fee.status === 'Unpaid' ? 'unpaid' : 'paid'}">${fee.status}</td>
+                    `;
+                    feesTableBody.appendChild(row);
+                });
+
+                feesList.style.display = 'block';
+            } else {
+                feesTableBody.innerHTML = `
+                    <tr>
+                        <td colspan="3">No outstanding fees found for Omang: <strong>${omang}</strong></td>
+                    </tr>
+                `;
+                feesList.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+    <style>
+
+/* Fees Section */
+.fees-section 
+{
+
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+.fees-container 
+{
+
+    background: #fff4e6;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+
+}
+
+.fees-container h2 
+{
+
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #3B2F2F;
+    text-align: center;
+
+}
+
+.fees-form 
+{
+
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.fees-form .form-group 
+{
+
+    margin-bottom: 15px;
+
+}
+
+.fees-form input 
+{
+
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+}
+
+.submit-btn 
+{
+
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+}
+
+.submit-btn:hover 
+{
+
+    background: #218838;
+
+}
+
+.fees-list 
+{
+
+    margin-top: 20px;
+
+}
+
+.fees-list h3 
+{
+
+    text-align: center;
+    margin-bottom: 15px;
+    color: #3B2F2F;
+
+}
+
+table 
+{
+
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+
+}
+
+table th, 
+table td 
+{
+
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+
+}
+
+table th 
+{
+
+    background: #f3f4f6;
+    color: #333;
+
+}
+
+table tr:nth-child(even) 
+{
+
+    background: #f9fafb;
+
+}
+
+table td 
+{
+
+    color: #555;
+
+}
+
+table td:nth-child(3) 
+{
+
+    font-weight: bold;
+
+}
+
+table td:nth-child(3):contains('Unpaid') 
+{
+
+    color: #d32f2f;
+
+}
+
+table td:nth-child(3):contains('Paid') 
+{
+
+    color: #28a745;
+
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) 
+{
+
+    .fees-form input 
+    {
+
+        width: 100%;
+
+    }
+
+    table th, 
+    table td 
+    {
+
+        font-size: 14px;
+
+    }
+
+}
+
+    </style>
+
+
