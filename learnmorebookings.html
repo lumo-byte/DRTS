@@ -1,0 +1,192 @@
+<head>
+<meta charset="UTF-8" />
+<script src="script.js"defer></script>
+<link rel="stylesheet" href="style.css"/>
+<title>DRTS - Learn More About Bookings</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="DRTS Logo" />
+    </a>
+  </div>
+
+  <!-- Hamburger Menu for Mobile -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links">
+    <li>
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="book.html">Book for a Test</a>
+        <a href="vehicleregistration.html">Vehicle Registration</a>
+        <a href="driverslicenserenewal.html">Driver's License Renewal</a>
+      </div>
+    </li>
+    <li>
+      <a href="#">Fines & Penalties</a>
+      <div class="dropdown-content">
+        <a href="licenserenewal.html">Pay Traffic Fines</a>
+        <a href="outstandingfees.html">View Outstanding Fees</a>
+        <a href="appealfine.html">Appeal a Fine</a>
+      </div>
+    </li>
+    <li>
+      <a href="contact.html">Contact</a>
+    </li>
+  </ul>
+</div>
+
+<!-- Test Information Section -->
+<section class="learn-more">
+  <h2>Learn More About Our Tests</h2>
+
+  <!-- Theory Test -->
+  <div class="test-info theory-bg">
+    <h3>Theory Test</h3>
+    <p>
+      The theory test is the first step towards getting your driver’s license. It assesses your knowledge of road signs, traffic rules, and safe driving practices. You’ll answer multiple-choice questions on a computer in your preferred language (English or Setswana).
+    </p>
+    <p><strong>Pass Mark:</strong> 26 out of 30 questions</p>
+
+    <!-- Download Button -->
+    <a href="materials/theory-study-material.pdf" class="download-btn" target="_blank">
+      📥 Download Study Material
+    </a>
+  </div>
+
+  <!-- Yard Test -->
+  <div class="test-info yard-bg">
+    <h3>Yard Test</h3>
+    <p>
+      The yard test evaluates your ability to control a vehicle in a closed environment. This includes tasks like reversing, parking, and completing a three-point turn.
+    </p>
+    <p><strong>Pass Mark:</strong>70 Points out of 100</p>
+    <p><strong>Tip:</strong> Practice your maneuvering skills at a driving school before attempting this test.</p>
+
+    <!-- Yard Test Slider -->
+    <div class="yard-slider">
+      <div class="yard-slide active-slide">
+        <img src="https://vavista.com/wp-content/uploads/2024/01/Parralel-Park-3-scaled72.jpeg" alt="Parallel Parking">
+        <h4>Step 1: Parallel Parking</h4>
+        <p>Align your car properly for parallel parking. Use mirrors and signals correctly.</p>
+      </div>
+      <div class="yard-slide">
+        <img src="https://www.driveredcoach.com/wp-content/uploads/2019/04/diagram_u-turn.jpg" alt="Three-Point Turn">
+        <h4>Step 2: Three-Point Turn</h4>
+        <p>Execute a safe three-point turn within the marked area, avoiding lines.</p>
+      </div>
+      <div class="yard-slide">
+        <img src="https://impro.usercontent.one/appid/oneComWsb/domain/superdriver.co.uk/media/superdriver.co.uk/onewebmedia/LRReverse%20Bay%20Park%204.png?etag=%22546b-602287b3%22&sourceContentType=image%2Fpng&ignoreAspectRatio&resize=455%2B308" alt="Reversing">
+        <h4>Step 3: Reversing</h4>
+        <p>Reverse your car in a straight line while maintaining full control.</p>
+      </div>
+      <div class="yard-slide">
+        <img src="https://driving-test-success.com/bay_parking/bay-parking-turn-approach.jpg" alt="Parking in Bay">
+        <h4>Step 4: Parking in a Bay</h4>
+        <p>Enter and exit a parking bay without hitting the cones.</p>
+      </div>
+      <div class="yard-slide">
+        <img src="https://sites.create-cdn.net/siteimages/11/5/3/115344/19/9/8/19985800/2000x1409.jpg?1653067402" alt="Emergency Stop">
+        <h4>Step 5: Emergency Stop</h4>
+        <p>Practice stopping quickly and safely as per examiner’s instructions.</p>
+      </div>
+
+      <div class="yard-controls">
+        <button onclick="prevYardSlide()">Previous</button>
+        <button onclick="nextYardSlide()">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Road Test -->
+  <div class="test-info road-bg">
+    <h3>Road Test</h3>
+    <p>
+      The road test assesses your driving skills in real traffic conditions. You will be evaluated on lane discipline, signaling, and overall road safety.
+    </p>
+    <p><strong>Pass Mark:</strong>70 points out of 100</p>
+    <p><strong>Tip:</strong> Stay calm and follow all traffic rules carefully during the test.</p>
+
+    <!-- Road Test Slider -->
+    <div class="road-slider">
+      <div class="road-slide active-slide">
+        <img src="https://news.motability.co.uk/wp-content/uploads/2018/12/thumbnail-30c79aadd1939ff17b437e9e2f1c0931-1140x618.jpeg" alt="Urban Driving">
+        <h4>Step 1: Urban Driving</h4>
+        <p>Navigate city streets while observing speed limits and traffic signals.</p>
+      </div>
+      <div class="road-slide">
+        <img src="https://d1bat1ruswunxz.cloudfront.net/app/uploads/2020/10/RimsUSALLC-seotool-58570-HowtoDrive-blogbanner1.jpg" alt="Highway Driving">
+        <h4>Step 2: Highway Driving</h4>
+        <p>Maintain safe distances and lane discipline on highways.</p>
+      </div>
+      <div class="road-slide">
+        <img src="https://d2hucwwplm5rxi.cloudfront.net/wp-content/uploads/2021/07/08055416/How-to-avoid-Common-Driving-Emergencies-Cover-080720211053.jpg" alt="Emergency Situations">
+        <h4>Step 3: Emergency Situations</h4>
+        <p>Respond calmly to sudden stops or obstacles as instructed by the examiner.</p>
+      </div>
+
+      <div class="road-controls">
+        <button onclick="prevRoadSlide()">Previous</button>
+        <button onclick="nextRoadSlide()">Next</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+
+        <div class="footer-container">
+
+                <div class="footer-box">
+                        <h3>Quick Links</h3>
+                        <ul>
+                                <li><a href="#">Bookings</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                        </ul>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Contact Us</h3>
+                        <p>Phone: 390 5422</p>
+                        <p>Email: info@drts.gov.bw</p>
+                        <p>Address: 8WJ3+H3V, Nkrumah, Gaborone</p>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                </div>
+
+        </div>
+<br>
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+                <p>&copy; 2025 Department of Road Transport and Safety. All Rights Reserved.</p>
+        </div>
+
+</footer>
+
+
+</html>
