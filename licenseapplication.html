@@ -1,0 +1,223 @@
+<head>
+<meta charset="UTF-8" />
+<title>DRTS - License Application</title>
+<script src="script.js"defer></script>
+<link rel="stylesheet" href="style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- Navbar -->
+<div class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="DRTS Logo" />
+    </a>
+  </div>
+
+  <!-- Hamburger Menu for Mobile -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links">
+    <li>
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="book.html">Book for a Test</a>
+        <a href="vehicleregistration.html">Vehicle Registration</a>
+        <a href="driverslicenserenewal.html">Driver's License Renewal</a>
+      </div>
+    </li>
+    <li>
+      <a href="#">Fines & Penalties</a>
+      <div class="dropdown-content">
+        <a href="licenserenewal.html">Pay Traffic Fines</a>
+        <a href="outstandingfees.html">View Outstanding Fees</a>
+        <a href="appealfine.html">Appeal a Fine</a>
+      </div>
+    </li>
+    <li>
+      <a href="contact.html">Contact</a>
+    </li>
+  </ul>
+</div>
+
+<!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Upload Your Documents</h1>
+            <p>Please upload your test results and passport photo to proceed with your license application.</p>
+        </div>
+    </section>
+
+    <!-- Upload Form Section -->
+    <section class="upload-section">
+        <div class="upload-container">
+            <h2>License Application</h2>
+            <form class="upload-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="omang">Omang/License Number</label>
+                    <input type="text" id="omang" name="omang" placeholder="Enter your Omang/License Number" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="testResult">Upload Test Results (PDF, JPG, PNG)</label>
+                    <input type="file" id="testResult" name="testResult" accept=".pdf, .jpg, .jpeg, .png" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="passportPhoto">Upload Passport-sized photo (JPG, PNG)</label>
+                    <input type="file" id="passportPhoto" name="passportPhoto" accept=".jpg, .jpeg, .png" required />
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Documents</button>
+            </form>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="footer">
+
+        <div class="footer-container">
+
+                <div class="footer-box">
+                        <h3>Quick Links</h3>
+                        <ul>
+                                <li><a href="#">Bookings</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                        </ul>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Contact Us</h3>
+                        <p>Phone: 390 5422</p>
+                        <p>Email: info@drts.gov.bw</p>
+                        <p>Address: 8WJ3+H3V, Nkrumah, Gaborone</p>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                </div>
+
+        </div>
+<br>
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+                <p>&copy; 2025 Department of Road Transport and Safety. All Rights Reserved.</p>
+        </div>
+
+</footer>
+
+</html>
+
+<style>
+
+/* Upload Section */
+.upload-section 
+{
+
+    padding: 40px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+
+.upload-container 
+{
+
+    background: #fff4e6;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+
+}
+
+.upload-container h2 
+{
+
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #3B2F2F;
+    text-align: center;
+
+}
+
+.upload-form .form-group 
+{
+
+    margin-bottom: 20px;
+
+}
+
+.upload-form label 
+{
+
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+
+}
+
+.upload-form input[type="text"],
+.upload-form input[type="file"] 
+{
+
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+}
+
+.submit-btn 
+{
+
+    display: block;
+    width: 100%;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+}
+
+.submit-btn:hover 
+{
+
+    background: #218838;
+
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) 
+{
+
+    .upload-container 
+    {
+
+        padding: 20px;
+
+    }
+
+}
+
+
+</style>

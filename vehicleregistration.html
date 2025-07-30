@@ -1,0 +1,176 @@
+<head>
+<meta charset="UTF-8" />
+<script src="script.js"defer></script>
+<link rel="stylesheet" href="style.css"/>
+<title>DRTS - Vehicle License Renewal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="DRTS Logo" />
+    </a>
+  </div>
+
+  <!-- Hamburger Menu for Mobile -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links">
+    <li>
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="book.html">Book for a Test</a>
+        <a href="vehicleregistration.html">Vehicle Registration</a>
+        <a href="driverslicenserenewal.html">Driver's License Renewal</a>
+      </div>
+    </li>
+    <li>
+      <a href="#">Fines & Penalties</a>
+      <div class="dropdown-content">
+        <a href="licenserenewal.html">Pay Traffic Fines</a>
+        <a href="vehicleinspection.html">View Outstanding Fees</a>
+        <a href="appealfine.html">Appeal a Fine</a>
+      </div>
+    </li>
+    <li>
+      <a href="contact.html">Contact</a>
+    </li>
+  </ul>
+</div>
+
+<!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Get Your License Disk</h1>
+            <p>Follow the steps below to obtain your vehicle license disk.</p>
+        </div>
+    </section>
+
+  <style>
+
+    
+  </style>
+</head>
+<body>
+
+  <div class="disc-generator">
+    <h2>Generate Your Vehicle License Disc</h2>
+    <form id="discForm">
+      <input type="text" id="regNumber" placeholder="Enter Vehicle Registration Number" required />
+      <br />
+      <button type="submit">Generate Disc</button>
+    </form>
+
+    <div id="disc" class="license-disc">
+      <h3>Vehicle License Disc</h3>
+      <center>
+        <div id="discDetails">
+          <!-- Disc content will appear here -->
+        </div>
+      </center>
+      <center><button class="print-btn" onclick="window.print()">Print Disc</button></center>
+    </div>
+  </div>
+
+  <script>
+    // Handle form submission
+    document.getElementById("discForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const reg = document.getElementById("regNumber").value.trim().toUpperCase();
+
+      // Mock data
+      const data = {
+        "B123ABC": {
+          owner: "Thato Molefe",
+          vehicleType: "Private Vehicle",
+          registration: "B123ABC",
+          expiry: "SEP 2025",
+          amount: "P420.00",
+          issueDate: "12 SEP 2024"
+        },
+        "BFX994GP": {
+          owner: "Naledi Dube",
+          vehicleType: "Motor Vehicle",
+          registration: "BFX994GP",
+          expiry: "SEP 2024",
+          amount: "P390.00",
+          issueDate: "03 SEP 2023"
+        }
+      };
+
+      const disc = document.getElementById("disc");
+      const details = document.getElementById("discDetails");
+
+      if (data[reg]) {
+        const info = data[reg];
+        details.innerHTML = `
+          <strong>Owner:</strong> ${info.owner}<br>
+          <strong>Vehicle Type:</strong> ${info.vehicleType}<br>
+          <strong>Registration Number:</strong> ${info.registration}<br>
+          <strong>Issue Date:</strong> ${info.issueDate}<br>
+          <strong>Expiry Date:</strong> ${info.expiry}<br>
+          <strong>Amount Paid:</strong> ${info.amount}
+        `;
+      } else {
+        details.innerHTML = `<p style="color:red;">❌ No record found for registration number: <b>${reg}</b></p>`;
+      }
+
+      // Always show the disc container after searching
+      disc.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
+
+
+<!-- Footer -->
+<footer class="footer">
+        <div class="footer-container">
+                <div class="footer-box">
+                        <h3>Quick Links</h3>
+                        <ul>
+                                <li><a href="#">Bookings</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                        </ul>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Contact Us</h3>
+                        <p>Phone: 390 5422</p>
+                        <p>Email: info@drts.gov.bw</p>
+                        <p>Address: 8WJ3+H3V, Nkrumah, Gaborone</p>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                </div>
+
+        </div>
+<br>
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+                <p>&copy; 2025 Department of Road Transport and Safety. All Rights Reserved.</p>
+        </div>
+
+</footer>

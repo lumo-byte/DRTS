@@ -1,0 +1,148 @@
+<html>
+
+<head>
+<meta charset="UTF-8" />
+<script src="script.js"defer></script>
+<link rel="stylesheet" href="style.css"/>
+<title>DRTS - Vehicle License Renewal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- Navbar -->
+<div class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="DRTS Logo" />
+    </a>
+  </div>
+
+  <!-- Hamburger Menu for Mobile -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links">
+    <li>
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="book.html">Book for a Test</a>
+        <a href="vehicleregistration.html">Vehicle Registration</a>
+        <a href="driverslicenserenewal.html">Driver's License Renewal</a>
+      </div>
+    </li>
+    <li>
+      <a href="#">Fines & Penalties</a>
+      <div class="dropdown-content">
+        <a href="licenserenewal.html">Pay Traffic Fines</a>
+        <a href="outstandingfees.html">View Outstanding Fees</a>
+        <a href="appealfine.html">Appeal a Fine</a>
+      </div>
+    </li>
+    <li>
+      <a href="contact.html">Contact</a>
+    </li>
+  </ul>
+</div>
+
+<div class="payment-portal">
+  <h2>Secure Payment</h2>
+  <p>Select your payment method</p>
+
+  <!-- Payment Options -->
+  <div class="payment-grid">
+    <label class="payment-option">
+      <input type="radio" name="payment-method" value="visa" checked>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="payment-method" value="orange-money">
+      <img src="orange money.png" alt="Orange Money">
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="payment-method" value="myzaka">
+      <img src="myzaka logo.png" alt="MyZaka">
+    </label>
+
+    <label class="payment-option">
+      <input type="radio" name="payment-method" value="smega">
+      <img src="https://www.mobilemoneybw.co.bw/_next/image?url=%2Fsmega%2Fsmega-image.png&w=256&q=75" alt="Smega">
+    </label>
+  </div>
+
+  <!-- Payment Form -->
+  <form class="payment-form">
+    <div class="form-group">
+      <label for="cardholder">Cardholder Name</label>
+      <input type="text" id="cardholder" placeholder="John Doe" required>
+    </div>
+
+    <div class="form-group">
+      <label for="cardnumber">Card Number</label>
+      <input type="text" id="cardnumber" placeholder="1234 5678 9012 3456" required>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="expiry">Expiry Date</label>
+        <input type="text" id="expiry" placeholder="MM/YY" required>
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV</label>
+        <input type="password" id="cvv" placeholder="123" required>
+      </div>
+    </div>
+
+    <button type="submit" class="pay-btn">Pay Now</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+
+        <div class="footer-container">
+
+                <div class="footer-box">
+                        <h3>Quick Links</h3>
+                        <ul>
+                                <li><a href="#">Bookings</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                        </ul>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Contact Us</h3>
+                        <p>Phone: 390 5422</p>
+                        <p>Email: info@drts.gov.bw</p>
+                        <p>Address: 8WJ3+H3V, Nkrumah, Gaborone</p>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                </div>
+
+        </div>
+<br>
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+                <p>&copy; 2025 Department of Road Transport and Safety. All Rights Reserved.</p>
+        </div>
+
+</footer>
+
+</html>

@@ -1,0 +1,209 @@
+<head>
+<meta charset="UTF-8" />
+<title>DRTS - Book for a Test</title>
+<script src="script.js"defer></script>
+<link rel="stylesheet" href="style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="DRTS Logo" />
+    </a>
+  </div>
+
+  <!-- Hamburger Menu for Mobile -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links">
+    <li>
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="book.html">Book for a Test</a>
+        <a href="vehicleregistration.html">Vehicle Registration</a>
+        <a href="driverslicenserenewal.html">Driver's License Renewal</a>
+      </div>
+    </li>
+    <li>
+      <a href="#">Fines & Penalties</a>
+      <div class="dropdown-content">
+        <a href="licenserenewal.html">Pay Traffic Fines</a>
+        <a href="outstandingfees.html">View Outstanding Fees</a>
+        <a href="appealfine.html">Appeal a Fine</a>
+      </div>
+    </li>
+    <li>
+      <a href="contact.html">Contact</a>
+    </li>
+  </ul>
+</div>
+        
+  <section class="test-application">
+  <h2>Book for Your Test</h2>
+
+  <!-- Test Type Toggle -->
+ <div class="test-toggle" role="tablist" aria-label="Test Type Tabs">
+    <button class="toggle-btn active" type="button" onclick="switchTest(0)" aria-selected="true" aria-controls="theory-form" id="theory-tab">Theory Test</button>
+    <button class="toggle-btn" type="button" onclick="switchTest(1)" aria-selected="false" aria-controls="yard-form" id="yard-tab">Yard Test</button>
+    <button class="toggle-btn" type="button" onclick="switchTest(2)" aria-selected="false" aria-controls="road-form" id="road-tab">Road Test</button>
+</div>
+
+<!-- Sliding Forms -->
+ <!-- Forms -->
+<div id="theory-form"></div>
+<div id="yard-form" style="display:none;"></div>
+<div id="road-form" style="display:none;"></div>
+
+    <!-- Theory Test Form -->
+    <form class="test-form active-form" id="theory-form" aria-labelledby="theory-tab" autocomplete="off">
+      <div class="form-group">
+        <label for="omang1">Omang Number</label>
+        <input type="text" id="omang1" name="omang1" placeholder="Enter your Omang number" required>
+      </div>
+      <div class="form-group">
+        <label for="fullName1">Full Name</label>
+        <input type="text" id="fullName1" name="fullName1" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email1">Email</label>
+        <input type="email" id="email1" name="email1" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone1">Cellphone Number</label>
+        <input type="tel" id="phone1" name="phone1" placeholder="Enter your cellphone number" required>
+      </div>
+      <div class="form-group">
+        <label for="date1">Preferred Test Date</label>
+        <input type="date" id="date1" name="date1" required>
+      </div>
+      <div class="form-group">
+        <label for="language1">Preferred Language</label>
+        <select id="language1" name="language1" required>
+          <option value="">Select Language</option>
+          <option value="english">English</option>
+          <option value="setswana">Setswana</option>
+        </select>
+      </div>
+      <a href="pay.html" class="submit-btn" style="display:block;text-align:center; text-decoration: none;">Proceed to Payment</a>
+    </form>
+
+    <!-- Yard Test Form -->
+    <form class="test-form" id="yard-form" aria-labelledby="yard-tab" autocomplete="off">
+      <div class="form-group">
+        <label for="omang2">Omang Number</label>
+        <input type="text" id="omang2" name="omang2" placeholder="Enter your Omang number" required>
+      </div>
+      <div class="form-group">
+        <label for="fullName2">Full Name</label>
+        <input type="text" id="fullName2" name="fullName2" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email2">Email</label>
+        <input type="email" id="email2" name="email2" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone2">Cellphone Number</label>
+        <input type="tel" id="phone2" name="phone2" placeholder="Enter your cellphone number" required>
+      </div>
+      <div class="form-group">
+        <label for="date2">Preferred Test Date</label>
+        <input type="date" id="date2" name="date2" required>
+      </div>
+      <div class="form-group">
+        <label for="vehicleType2">Vehicle Type</label>
+        <select id="vehicleType2" name="vehicleType2" required>
+          <option value="">Select Vehicle Type</option>
+          <option value="light">Light Vehicle</option>
+          <option value="heavy">Heavy Vehicle</option>
+        </select>
+      </div>
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+
+    <!-- Road Test Form -->
+    <form class="test-form" id="road-form" aria-labelledby="road-tab" autocomplete="off">
+      <div class="form-group">
+        <label for="omang3">Omang Number</label>
+        <input type="text" id="omang3" name="omang3" placeholder="Enter your Omang number" required>
+      </div>
+      <div class="form-group">
+        <label for="fullName3">Full Name</label>
+        <input type="text" id="fullName3" name="fullName3" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email3">Email</label>
+        <input type="email" id="email3" name="email3" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone3">Cellphone Number</label>
+        <input type="tel" id="phone3" name="phone3" placeholder="Enter your cellphone number" required>
+      </div>
+      <div class="form-group">
+        <label for="date3">Preferred Test Date</label>
+        <input type="date" id="date3" name="date3" required>
+      </div>
+      <div class="form-group">
+        <label for="previousAttempts3">Number of Previous Attempts</label>
+        <input type="number" id="previousAttempts3" name="previousAttempts3" placeholder="Enter number" min="0" required>
+      </div>
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+  </div>
+</section>
+
+</body>
+
+<!-- Footer -->
+<footer class="footer">
+
+        <div class="footer-container">
+
+                <div class="footer-box">
+                        <h3>Quick Links</h3>
+                        <ul>
+                                <li><a href="#">Bookings</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                        </ul>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Contact Us</h3>
+                        <p>Phone: 390 5422</p>
+                        <p>Email: info@drts.gov.bw</p>
+                        <p>Address: 8WJ3+H3V, Nkrumah, Gaborone</p>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                </div>
+
+        </div>
+<br>
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+                <p>&copy; 2025 Department of Road Transport and Safety. All Rights Reserved.</p>
+        </div>
+
+</footer>
+
+</html>

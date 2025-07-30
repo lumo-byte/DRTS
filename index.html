@@ -1,0 +1,162 @@
+<head>
+<meta charset="UTF-8" />
+<title>DRTS - Home</title>
+<script src="script.js"defer></script>
+<link rel="stylesheet" href="style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Language -->
+<div id="language-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title">
+  <div class="modal-content">
+    <h2 id="lang-modal-title">Select Your Language</h2>
+    <button class="lang-btn" onclick="setLanguage('english')">English</button>
+    <a href="index-bw.html"><button class="lang-btn" onclick="setLanguage('setswana')">Setswana</button></a>
+  </div>
+</div>
+
+<!-- Navbar -->
+<div class="navbar">
+  <!-- Logo -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="logo.png" alt="DRTS Logo" />
+    </a>
+  </div>
+
+  <!-- Hamburger Menu for Mobile -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links">
+    <li>
+      <a href="#">Services</a>
+      <div class="dropdown-content">
+        <a href="book.html">Book for a Test</a>
+        <a href="vehicleregistration.html">Vehicle Registration</a>
+        <a href="driverslicenserenewal.html">Driver's License Renewal</a>
+      </div>
+    </li>
+    <li>
+      <a href="#">Fines & Penalties</a>
+      <div class="dropdown-content">
+        <a href="pay.html">Pay Traffic Fines</a>
+        <a href="outstandingfees.html">View Outstanding Fees</a>
+        <a href="appealfine.html">Appeal a Fine</a>
+      </div>
+    </li>
+    <li>
+      <a href="contact.html">Contact</a>
+    </li>
+  </ul>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+        <div class="hero-content">
+                <h1>Department of Road Transport and Safety</h1>
+                <p>Your digital gateway to licensing, testing, and vehicle services across the country.</p>
+        </div>
+</section>
+
+<h2 style="text-align: center; background-color: #3B2F2F; color: white; padding: 30px;">Services</h2>
+
+<section class="features">
+
+<div class="feature-row reverse">
+    <div class="feature-text">
+      <h3>Test Bookings</h3>
+      <p>Book for theory, yard, and road tests with ease.</p>
+      <div class="feature-buttons">
+        <a href="learnmorebookings.html" class="round-btn">Learn More</a>
+        <a href="book.html" class="round-btn primary">Book now</a>
+      </div>
+    </div>
+    <div class="feature-image">
+      <img src="matshwao.png" alt="Vehicle Registration">
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="feature-text">
+      <h3>Driver Licensing</h3>
+      <p>Apply for learner's permits, book driving tests, and upgrade to a full license easily.</p>
+      <div class="feature-buttons">
+        <a href="#" class="round-btn">Learn More</a>
+        <a href="licenseapplication.html" class="round-btn primary">Apply Now</a>
+      </div>
+    </div>
+    <div class="feature-image">
+      <img src="Driving-licence.jpg" alt="Driver Licensing">
+    </div>
+  </div>
+
+  <div class="feature-row reverse">
+    <div class="feature-text">
+      <h3>Vehicle Registration</h3>
+      <p>Register your vehicle, renew your license, and handle ownership transfers with ease.</p>
+      <div class="feature-buttons">
+        <a href="#" class="round-btn">Learn More</a>
+        <a href="vehicleregistration.html" class="round-btn primary">Register Now</a>
+      </div>
+    </div>
+    <div class="feature-image">
+      <img src="vehicle registration.jpg" alt="Vehicle Registration">
+    </div>
+  </div>
+</section>
+
+</body>
+
+<!-- Footer -->
+<footer class="footer">
+
+        <div class="footer-container">
+
+                <div class="footer-box">
+                        <h3>Quick Links</h3>
+                        <ul>
+                                <li><a href="#">Bookings</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                        </ul>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Contact Us</h3>
+                        <p>Phone: 390 5422</p>
+                        <p>Email: info@drts.gov.bw</p>
+                        <p>Address: 8WJ3+H3V, Nkrumah, Gaborone</p>
+                </div>
+
+                <div class="footer-box">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                </div>
+
+        </div>
+<br>
+        <hr class="footer-line">
+
+        <div class="footer-bottom">
+                <p>&copy; 2025 Department of Road Transport and Safety. All Rights Reserved.</p>
+        </div>
+
+</footer>
+
+
+</html>
+
